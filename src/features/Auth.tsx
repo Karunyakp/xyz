@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   ArrowUpRight,
@@ -8,11 +8,9 @@ import {
   Users,
   Layers3,
   Terminal,
-  Lock,
 } from 'lucide-react';
 import { Button, Card, ErrorBox, SmartForm } from '../components/ui';
 import { authService, institutionService } from '../services';
-import { supabase } from '../infrastructure/supabase';
 import { useApp } from '../app/context';
 import { signUpSchema } from '../domain/validation';
 export function Brand() {
@@ -31,37 +29,7 @@ export function AuthPage() {
   const reset = location.pathname === '/reset-password';
   const [mode, setMode] = useState<'login' | 'signup' | 'forgot'>('login');
   const [message, setMessage] = useState('');
-  const [prefed, setPrefed] = useState<{ role: string; department?: string; name?: string } | null>(null);
   const [selectedRole, setSelectedRole] = useState<'student' | 'faculty' | 'organiser'>('student');
-
-  useEffect(() => {
-    if (mode !== 'signup' || !emailInput.includes('@') || !supabase) {
-      setPrefed(null);
-      return;
-    }
-    const t = setTimeout(async () => {
-      try {
-        const { data } = await supabase!
-          .from('invitations')
-          .select('role, departments(name)')
-          .eq('email', emailInput.toLowerCase().trim())
-          .is('accepted_at', null)
-          .maybeSingle();
-        if (data) {
-          const dept = (data.departments as unknown as { name?: string })?.name;
-          setPrefed({
-            role: data.role,
-            department: dept,
-          });
-        } else {
-          setPrefed(null);
-        }
-      } catch {
-        setPrefed(null);
-      }
-    }, 400);
-    return () => clearTimeout(t);
-  }, [emailInput, mode]);
   return (
     <div className="auth-screen">
       <section className="auth-story">
@@ -130,22 +98,7 @@ export function AuthPage() {
             </div>
           ) : (
             <>
-              {mode === 'signup' && prefed && (
-                <div className="p-3 mb-4 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm flex items-start gap-2">
-                  <Lock size={16} className="mt-0.5 text-emerald-600 shrink-0" />
-                  <div>
-                    <strong>Verified Institutional Record Found</strong>
-                    <div className="text-xs text-emerald-700 mt-0.5">
-                      Assigned Role: <span className="font-semibold uppercase">{prefed.role}</span>
-                      {prefed.department && ` • Department: ${prefed.department}`}
-                    </div>
-                    <div className="text-[11px] text-emerald-600 mt-1">
-                      This role was pre-configured by your college administrator and is locked for security.
-                    </div>
-                  </div>
-                </div>
-              )}
-              {mode === 'signup' && !prefed && (
+              {mode === 'signup' && (
                 <div className="mb-4">
                   <label className="block text-xs font-medium text-slate-700 mb-1.5">Select your intended campus role</label>
                   <div className="grid grid-cols-3 gap-2">
@@ -157,10 +110,10 @@ export function AuthPage() {
                       <button
                         key={r.id}
                         type="button"
-                        onClick={() => setSelectedRole(r.id as any)}
+                        onClick={() => setSelectedRole(r.id as 'student' | 'faculty' | 'organiser')}
                         className={`py-2 px-2.5 text-xs font-medium rounded-md border text-center transition-all ${
                           selectedRole === r.id
-                            ? 'bg-blue-50 border-blue-600 text-blue-700 ring-1 ring-blue-600'
+                            ? 'bg-blue-50 border-blue-600 text-blue-700 ring-1 ring-blue-600 font-semibold'
                             : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
                         }`}
                       >
@@ -213,7 +166,7 @@ export function AuthPage() {
                   }
                   if (mode === 'signup') {
                     const v = signUpSchema.parse(p);
-                    await authService.signup(v.email, v.password, v.full_name, prefed ? prefed.role : selectedRole);
+                    await authService.signup(v.email, v.password, v.full_name, selectedRole);
                     setMessage('Check your email to verify your account.');
                   } else if (mode === 'forgot') {
                     await authService.reset(String(p.email));
