@@ -6,3 +6,6 @@ dist/
 coverage/
 .supabase/
 *.log
+
+Planora_UI_Design_Specification.pdf
+*.pdf
