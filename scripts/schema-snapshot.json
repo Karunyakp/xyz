@@ -1,0 +1,3182 @@
+{
+  "tables": [
+    {
+      "name": "academic_terms",
+      "columns": [
+        {
+          "table_name": "academic_terms",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "academic_year",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "starts_on",
+          "data_type": "date",
+          "udt_name": "date",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "ends_on",
+          "data_type": "date",
+          "udt_name": "date",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "academic_terms",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "announcements",
+      "columns": [
+        {
+          "table_name": "announcements",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "body",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "created_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "announcements",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "approvals",
+      "columns": [
+        {
+          "table_name": "approvals",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "reviewer_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "decision",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "comments",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "version",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "approvals",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "attendance",
+      "columns": [
+        {
+          "table_name": "attendance",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "registration_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "checked_in_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "checked_in_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "method",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "attendance",
+          "column_name": "note",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "audit_logs",
+      "columns": [
+        {
+          "table_name": "audit_logs",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "actor_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "action",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "entity_type",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "entity_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "details",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'{}'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "audit_logs",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "budget_entries",
+      "columns": [
+        {
+          "table_name": "budget_entries",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "kind",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "category",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "amount",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'pending'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "receipt_path",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "created_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "reviewed_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "review_note",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "budget_entries",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "certificates",
+      "columns": [
+        {
+          "table_name": "certificates",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "registration_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "recipient_name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "event_title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "verification_code",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "replace((gen_random_uuid())::text, '-'::text, ''::text)",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "issued_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "issued_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "certificates",
+          "column_name": "revoked_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "club_memberships",
+      "columns": [
+        {
+          "table_name": "club_memberships",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "club_memberships",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "club_memberships",
+          "column_name": "club_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "club_memberships",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "club_memberships",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'following'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "club_memberships",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "clubs",
+      "columns": [
+        {
+          "table_name": "clubs",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "department_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "logo_path",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "clubs",
+          "column_name": "accepting_members",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "completion_reports",
+      "columns": [
+        {
+          "table_name": "completion_reports",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "summary",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "outcomes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'submitted'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "submitted_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "reviewed_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "comments",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "completion_reports",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "departments",
+      "columns": [
+        {
+          "table_name": "departments",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "departments",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "departments",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "departments",
+          "column_name": "code",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "departments",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "events",
+      "columns": [
+        {
+          "table_name": "events",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "department_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "club_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "created_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "objectives",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "category",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Technical'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "event_type",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Workshop'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "mode",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'offline'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'DRAFT'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "starts_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "ends_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "registration_deadline",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "timezone",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'Asia/Kolkata'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "venue_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "online_url",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "capacity",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "waitlist_enabled",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "manual_approval",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "is_team",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "team_min",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "2",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "team_max",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": "5",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "allow_external",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "eligible_departments",
+          "data_type": "ARRAY",
+          "udt_name": "_uuid",
+          "is_nullable": "NO",
+          "column_default": "'{}'::uuid[]",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "eligible_years",
+          "data_type": "ARRAY",
+          "udt_name": "_int4",
+          "is_nullable": "NO",
+          "column_default": "'{}'::integer[]",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "questions",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'[]'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "agenda",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'[]'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "faqs",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'[]'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "rules",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "instructions",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "contact",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "cover_path",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "attachments",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'[]'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "estimated_budget",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "fee",
+          "data_type": "numeric",
+          "udt_name": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "featured",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "events",
+          "column_name": "search_vector",
+          "data_type": "tsvector",
+          "udt_name": "tsvector",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "ALWAYS"
+        }
+      ]
+    },
+    {
+      "name": "feedback",
+      "columns": [
+        {
+          "table_name": "feedback",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "rating",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "comment",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "feedback",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "global_categories",
+      "columns": [
+        {
+          "table_name": "global_categories",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "global_categories",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "global_categories",
+          "column_name": "enabled",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "institutions",
+      "columns": [
+        {
+          "table_name": "institutions",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "slug",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "logo_path",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'active'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "plan",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'starter'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "settings",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'{\"timezone\": \"Asia/Kolkata\", \"approval_count\": 1, \"waitlist_hours\": 24, \"allowed_domains\": [], \"approval_required\": true, \"external_registration\": false}'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "institutions",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "invitations",
+      "columns": [
+        {
+          "table_name": "invitations",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "email",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "role",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "scope_type",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'institution'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "scope_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "department_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "invited_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "expires_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "(now() + '7 days'::interval)",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "accepted_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "invitations",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "memberships",
+      "columns": [
+        {
+          "table_name": "memberships",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "department_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "kind",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'student'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'active'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "student_number",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "academic_year",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "memberships",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "notifications",
+      "columns": [
+        {
+          "table_name": "notifications",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "body",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "link",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "read_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "notifications",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "permissions",
+      "columns": [
+        {
+          "table_name": "permissions",
+          "column_name": "key",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "platform_admins",
+      "columns": [
+        {
+          "table_name": "platform_admins",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "profiles",
+      "columns": [
+        {
+          "table_name": "profiles",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "full_name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "avatar_path",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "interests",
+          "data_type": "ARRAY",
+          "udt_name": "_text",
+          "is_nullable": "NO",
+          "column_default": "'{}'::text[]",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "skills",
+          "data_type": "ARRAY",
+          "udt_name": "_text",
+          "is_nullable": "NO",
+          "column_default": "'{}'::text[]",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "bio",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "profiles",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "registrations",
+      "columns": [
+        {
+          "table_name": "registrations",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "team_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "registration_number",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "('PL-'::text || upper(substr(replace((gen_random_uuid())::text, '-'::text, ''::text), 1, 16)))",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "answers",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'{}'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "invitation_expires_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "registrations",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "resource_allocations",
+      "columns": [
+        {
+          "table_name": "resource_allocations",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resource_allocations",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resource_allocations",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resource_allocations",
+          "column_name": "resource_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resource_allocations",
+          "column_name": "quantity",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "resources",
+      "columns": [
+        {
+          "table_name": "resources",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resources",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resources",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resources",
+          "column_name": "quantity",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "resources",
+          "column_name": "description",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "role_assignments",
+      "columns": [
+        {
+          "table_name": "role_assignments",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "role",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "scope_type",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "scope_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_assignments",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "role_permissions",
+      "columns": [
+        {
+          "table_name": "role_permissions",
+          "column_name": "role",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "role_permissions",
+          "column_name": "permission",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "roles",
+      "columns": [
+        {
+          "table_name": "roles",
+          "column_name": "key",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "roles",
+          "column_name": "label",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "roles",
+          "column_name": "scopes",
+          "data_type": "ARRAY",
+          "udt_name": "_text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "saved_events",
+      "columns": [
+        {
+          "table_name": "saved_events",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "saved_events",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "saved_events",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "subscription_plans",
+      "columns": [
+        {
+          "table_name": "subscription_plans",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "subscription_plans",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "subscription_plans",
+          "column_name": "features",
+          "data_type": "jsonb",
+          "udt_name": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'{}'::jsonb",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "subscription_plans",
+          "column_name": "active",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "true",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "support_requests",
+      "columns": [
+        {
+          "table_name": "support_requests",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "created_by",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "subject",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "body",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'open'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "support_requests",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "tasks",
+      "columns": [
+        {
+          "table_name": "tasks",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "title",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "assigned_to",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "due_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'todo'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "tasks",
+          "column_name": "notes",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "teams",
+      "columns": [
+        {
+          "table_name": "teams",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "teams",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "teams",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "teams",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "teams",
+          "column_name": "leader_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "teams",
+          "column_name": "join_code",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "replace((gen_random_uuid())::text, '-'::text, ''::text)",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "venue_bookings",
+      "columns": [
+        {
+          "table_name": "venue_bookings",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "venue_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "starts_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "ends_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venue_bookings",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'requested'::text",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "venues",
+      "columns": [
+        {
+          "table_name": "venues",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "name",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "building",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "room",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "floor",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "capacity",
+          "data_type": "integer",
+          "udt_name": "int4",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "equipment",
+          "data_type": "ARRAY",
+          "udt_name": "_text",
+          "is_nullable": "NO",
+          "column_default": "'{}'::text[]",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "restrictions",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "venues",
+          "column_name": "maintenance",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "volunteers",
+      "columns": [
+        {
+          "table_name": "volunteers",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "user_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "'applied'::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "duty",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "starts_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "ends_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "volunteers",
+          "column_name": "attended",
+          "data_type": "boolean",
+          "udt_name": "bool",
+          "is_nullable": "NO",
+          "column_default": "false",
+          "is_generated": "NEVER"
+        }
+      ]
+    },
+    {
+      "name": "workflow_history",
+      "columns": [
+        {
+          "table_name": "workflow_history",
+          "column_name": "id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "institution_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "previous_status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "new_status",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "actor_id",
+          "data_type": "uuid",
+          "udt_name": "uuid",
+          "is_nullable": "YES",
+          "column_default": null,
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "reason",
+          "data_type": "text",
+          "udt_name": "text",
+          "is_nullable": "NO",
+          "column_default": "''::text",
+          "is_generated": "NEVER"
+        },
+        {
+          "table_name": "workflow_history",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "udt_name": "timestamptz",
+          "is_nullable": "NO",
+          "column_default": "now()",
+          "is_generated": "NEVER"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "proname": "accept_invitations",
+      "proargnames": null,
+      "argtypes": "{}",
+      "result": "integer"
+    },
+    {
+      "proname": "allocate_resource",
+      "proargnames": [
+        "event_id",
+        "resource_id",
+        "amount"
+      ],
+      "argtypes": "[0:2]={uuid,uuid,integer}",
+      "result": "void"
+    },
+    {
+      "proname": "analytics",
+      "proargnames": [
+        "i",
+        "from_date",
+        "to_date"
+      ],
+      "argtypes": "[0:2]={uuid,\"timestamp with time zone\",\"timestamp with time zone\"}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "assign_coordinator",
+      "proargnames": [
+        "i",
+        "u",
+        "r",
+        "scope_type",
+        "scope_id"
+      ],
+      "argtypes": "[0:4]={uuid,uuid,text,text,uuid}",
+      "result": "void"
+    },
+    {
+      "proname": "check_in",
+      "proargnames": [
+        "event_id",
+        "token",
+        "registration_id",
+        "reason"
+      ],
+      "argtypes": "[0:3]={uuid,text,uuid,text}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "claim_notification_emails",
+      "proargnames": [
+        "id",
+        "email",
+        "title",
+        "body",
+        "link"
+      ],
+      "argtypes": "{}",
+      "result": "TABLE(id uuid, email text, title text, body text, link text)"
+    },
+    {
+      "proname": "club_action",
+      "proargnames": [
+        "club_id",
+        "action",
+        "member_id"
+      ],
+      "argtypes": "[0:2]={uuid,text,uuid}",
+      "result": "void"
+    },
+    {
+      "proname": "completion_report",
+      "proargnames": [
+        "event_id",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "void"
+    },
+    {
+      "proname": "coordinators",
+      "proargnames": [
+        "i",
+        "c",
+        "name",
+        "role"
+      ],
+      "argtypes": "[0:1]={uuid,uuid}",
+      "result": "TABLE(name text, role text)"
+    },
+    {
+      "proname": "correct_attendance",
+      "proargnames": [
+        "attendance_id",
+        "reason"
+      ],
+      "argtypes": "[0:1]={uuid,text}",
+      "result": "void"
+    },
+    {
+      "proname": "create_invitation",
+      "proargnames": [
+        "i",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "uuid"
+    },
+    {
+      "proname": "create_support",
+      "proargnames": [
+        "i",
+        "subject_value",
+        "body_value"
+      ],
+      "argtypes": "[0:2]={uuid,text,text}",
+      "result": "void"
+    },
+    {
+      "proname": "eligible_event_ids",
+      "proargnames": [
+        "i"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "uuid[]"
+    },
+    {
+      "proname": "event_counts",
+      "proargnames": [
+        "event_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "finish_notification_email",
+      "proargnames": [
+        "job_id",
+        "provider_id",
+        "error_text"
+      ],
+      "argtypes": "[0:2]={uuid,text,text}",
+      "result": "void"
+    },
+    {
+      "proname": "institution_users",
+      "proargnames": [
+        "i",
+        "query_text",
+        "user_id",
+        "name",
+        "email",
+        "kind",
+        "status",
+        "department_id",
+        "student_number",
+        "academic_year"
+      ],
+      "argtypes": "[0:1]={uuid,text}",
+      "result": "TABLE(user_id uuid, name text, email text, kind text, status text, department_id uuid, student_number text, academic_year integer)"
+    },
+    {
+      "proname": "issue_certificates",
+      "proargnames": [
+        "event_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "integer"
+    },
+    {
+      "proname": "issue_ticket",
+      "proargnames": [
+        "registration_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "text"
+    },
+    {
+      "proname": "join_institution",
+      "proargnames": [
+        "slug_value"
+      ],
+      "argtypes": "[0:0]={text}",
+      "result": "uuid"
+    },
+    {
+      "proname": "manage_member",
+      "proargnames": [
+        "i",
+        "u",
+        "p"
+      ],
+      "argtypes": "[0:2]={uuid,uuid,jsonb}",
+      "result": "void"
+    },
+    {
+      "proname": "member_options",
+      "proargnames": [
+        "i",
+        "user_id",
+        "name"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "TABLE(user_id uuid, name text)"
+    },
+    {
+      "proname": "my_context",
+      "proargnames": null,
+      "argtypes": "{}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "participant_directory",
+      "proargnames": [
+        "event_id",
+        "query_text",
+        "registration_id",
+        "user_id",
+        "name",
+        "registration_number",
+        "status",
+        "team_id",
+        "checked_in_at",
+        "created_at"
+      ],
+      "argtypes": "[0:1]={uuid,text}",
+      "result": "TABLE(registration_id uuid, user_id uuid, name text, registration_number text, status text, team_id uuid, checked_in_at timestamp with time zone, created_at timestamp with time zone)"
+    },
+    {
+      "proname": "platform_action",
+      "proargnames": [
+        "action",
+        "p"
+      ],
+      "argtypes": "[0:1]={text,jsonb}",
+      "result": "uuid"
+    },
+    {
+      "proname": "platform_metrics",
+      "proargnames": null,
+      "argtypes": "{}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "process_waitlist",
+      "proargnames": [
+        "event_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "integer"
+    },
+    {
+      "proname": "publish_announcement",
+      "proargnames": [
+        "i",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "uuid"
+    },
+    {
+      "proname": "read_notification",
+      "proargnames": [
+        "notification_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "void"
+    },
+    {
+      "proname": "register_event",
+      "proargnames": [
+        "event_id",
+        "answers",
+        "team_name",
+        "team_code"
+      ],
+      "argtypes": "[0:3]={uuid,jsonb,text,text}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "registration_action",
+      "proargnames": [
+        "registration_id",
+        "action",
+        "reason"
+      ],
+      "argtypes": "[0:2]={uuid,text,text}",
+      "result": "text"
+    },
+    {
+      "proname": "reschedule_event",
+      "proargnames": [
+        "event_id",
+        "new_start",
+        "new_end",
+        "new_deadline",
+        "reason"
+      ],
+      "argtypes": "[0:4]={uuid,\"timestamp with time zone\",\"timestamp with time zone\",\"timestamp with time zone\",text}",
+      "result": "void"
+    },
+    {
+      "proname": "review_budget",
+      "proargnames": [
+        "entry_id",
+        "decision",
+        "reason"
+      ],
+      "argtypes": "[0:2]={uuid,text,text}",
+      "result": "void"
+    },
+    {
+      "proname": "review_comment",
+      "proargnames": [
+        "event_id",
+        "comment_text"
+      ],
+      "argtypes": "[0:1]={uuid,text}",
+      "result": "void"
+    },
+    {
+      "proname": "revoke_certificate",
+      "proargnames": [
+        "certificate_id",
+        "reason"
+      ],
+      "argtypes": "[0:1]={uuid,text}",
+      "result": "void"
+    },
+    {
+      "proname": "run_waitlist_jobs",
+      "proargnames": null,
+      "argtypes": "{}",
+      "result": "integer"
+    },
+    {
+      "proname": "save_academic_term",
+      "proargnames": [
+        "i",
+        "p",
+        "record_id"
+      ],
+      "argtypes": "[0:2]={uuid,jsonb,uuid}",
+      "result": "uuid"
+    },
+    {
+      "proname": "save_budget",
+      "proargnames": [
+        "event_id",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "uuid"
+    },
+    {
+      "proname": "save_directory",
+      "proargnames": [
+        "i",
+        "kind",
+        "p",
+        "record_id"
+      ],
+      "argtypes": "[0:3]={uuid,text,jsonb,uuid}",
+      "result": "uuid"
+    },
+    {
+      "proname": "save_event",
+      "proargnames": [
+        "i",
+        "p",
+        "event_id"
+      ],
+      "argtypes": "[0:2]={uuid,jsonb,uuid}",
+      "result": "uuid"
+    },
+    {
+      "proname": "save_settings",
+      "proargnames": [
+        "i",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "void"
+    },
+    {
+      "proname": "save_task",
+      "proargnames": [
+        "event_id",
+        "p",
+        "task_id"
+      ],
+      "argtypes": "[0:2]={uuid,jsonb,uuid}",
+      "result": "uuid"
+    },
+    {
+      "proname": "set_branding",
+      "proargnames": [
+        "i",
+        "path",
+        "club_id"
+      ],
+      "argtypes": "[0:2]={uuid,text,uuid}",
+      "result": "void"
+    },
+    {
+      "proname": "submit_feedback",
+      "proargnames": [
+        "event_id",
+        "rating_value",
+        "comment_text"
+      ],
+      "argtypes": "[0:2]={uuid,integer,text}",
+      "result": "void"
+    },
+    {
+      "proname": "toggle_saved",
+      "proargnames": [
+        "event_id"
+      ],
+      "argtypes": "[0:0]={uuid}",
+      "result": "boolean"
+    },
+    {
+      "proname": "transition_event",
+      "proargnames": [
+        "event_id",
+        "target",
+        "reason"
+      ],
+      "argtypes": "[0:2]={uuid,text,text}",
+      "result": "text"
+    },
+    {
+      "proname": "update_profile",
+      "proargnames": [
+        "p"
+      ],
+      "argtypes": "[0:0]={jsonb}",
+      "result": "void"
+    },
+    {
+      "proname": "verify_certificate",
+      "proargnames": [
+        "code"
+      ],
+      "argtypes": "[0:0]={text}",
+      "result": "jsonb"
+    },
+    {
+      "proname": "volunteer_action",
+      "proargnames": [
+        "event_id",
+        "p"
+      ],
+      "argtypes": "[0:1]={uuid,jsonb}",
+      "result": "void"
+    }
+  ]
+}

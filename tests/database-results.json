@@ -1,0 +1,164 @@
+{
+  "engine": "PGlite PostgreSQL WASM",
+  "hostedSupabase": false,
+  "passed": 39,
+  "failed": 0,
+  "results": [
+    {
+      "name": "All migrations apply to local PostgreSQL with all tables under RLS",
+      "status": "passed"
+    },
+    {
+      "name": "Students cannot create events or grant themselves roles",
+      "status": "passed"
+    },
+    {
+      "name": "Organiser creates a real draft and receives event-scoped access",
+      "status": "passed"
+    },
+    {
+      "name": "Drafts and records are invisible across tenants",
+      "status": "passed"
+    },
+    {
+      "name": "Direct status writes and cross-tenant RPC writes are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Publishing before approval and self-approval are rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Faculty approval reserves venue and permits publish and open",
+      "status": "passed"
+    },
+    {
+      "name": "Platform admin has tenant aggregates but no private student records",
+      "status": "passed"
+    },
+    {
+      "name": "Required custom answers and external eligibility enforced server-side",
+      "status": "passed"
+    },
+    {
+      "name": "Capacity confirms one participant and waitlists overflow in FIFO order",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate registrations and cross-tenant registration blocked",
+      "status": "passed"
+    },
+    {
+      "name": "Cancellation reserves the released seat for next queued student",
+      "status": "passed"
+    },
+    {
+      "name": "Expired seat invitations are released and the next student is invited",
+      "status": "passed"
+    },
+    {
+      "name": "Ticket tokens are hashed and only a participant can issue their own",
+      "status": "passed"
+    },
+    {
+      "name": "Check-in requires an ongoing event and an assigned scanner role",
+      "status": "passed"
+    },
+    {
+      "name": "QR check-in is idempotent and records scanner identity",
+      "status": "passed"
+    },
+    {
+      "name": "Volunteer cannot manually check in or inspect another event",
+      "status": "passed"
+    },
+    {
+      "name": "Check-in cannot use invalid tokens or cancelled registrations",
+      "status": "passed"
+    },
+    {
+      "name": "Budget approval requires a separate reviewer; ledger is tenant-private",
+      "status": "passed"
+    },
+    {
+      "name": "Certificates only issue to attended, completed events and verify publicly",
+      "status": "passed"
+    },
+    {
+      "name": "Feedback requires actual attendance and completion",
+      "status": "passed"
+    },
+    {
+      "name": "Overlapping venue bookings are rejected transactionally",
+      "status": "passed"
+    },
+    {
+      "name": "Cross-tenant foreign keys reject venue and department references",
+      "status": "passed"
+    },
+    {
+      "name": "Two-reviewer institutional policy rejects early publication",
+      "status": "passed"
+    },
+    {
+      "name": "Invitation roles are validated by scope and cannot target another tenant",
+      "status": "passed"
+    },
+    {
+      "name": "Unverified email cannot obtain institution membership",
+      "status": "passed"
+    },
+    {
+      "name": "Direct inserts into attendance, roles and certificates are denied",
+      "status": "passed"
+    },
+    {
+      "name": "Tenant suspension removes access even with an existing role assignment",
+      "status": "passed"
+    },
+    {
+      "name": "Audit logs exist and browser callers cannot invoke scheduler jobs",
+      "status": "passed"
+    },
+    {
+      "name": "External members cannot discover internal events or campus announcements",
+      "status": "passed"
+    },
+    {
+      "name": "Active member options contain names but no private academic or contact fields",
+      "status": "passed"
+    },
+    {
+      "name": "Scoped responsibility delegation cannot create an administrator",
+      "status": "passed"
+    },
+    {
+      "name": "Directory CRUD is permission checked and tenant scoped",
+      "status": "passed"
+    },
+    {
+      "name": "Resource allocations enforce inventory across overlapping events",
+      "status": "passed"
+    },
+    {
+      "name": "Assigned volunteer can complete their own task, not another task",
+      "status": "passed"
+    },
+    {
+      "name": "Rescheduling returns event to draft and invalidates its approval version",
+      "status": "passed"
+    },
+    {
+      "name": "Live counts use full database totals and unrecognised timezones fail validation",
+      "status": "passed"
+    },
+    {
+      "name": "Platform plan entitlements actually disable creation and registrations",
+      "status": "passed"
+    },
+    {
+      "name": "Academic terms are tenant-scoped, validated and managed only by administrators",
+      "status": "passed"
+    }
+  ]
+}

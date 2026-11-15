@@ -1,0 +1,147 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 check
+> npm run typecheck && npm run lint && npm test && npm run test:db && npm run build
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 typecheck
+> tsc -b
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 lint
+> eslint .
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /workspace/scratch/d47098a6e368/Planora
+
+ ✓ tests/domain.test.ts (8 tests) 9ms
+ ✓ tests/export.test.ts (1 test) 677ms
+   ✓ exports a real XLSX workbook with text cells and a usable dependency override  676ms
+ ✓ tests/routes.test.tsx (40 tests) 254ms
+
+ Test Files  3 passed (3)
+      Tests  49 passed (49)
+   Start at  03:59:31
+   Duration  3.73s (transform 593ms, setup 0ms, collect 3.47s, tests 941ms, environment 1ms, prepare 282ms)
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 test:db
+> node tests/database.mjs
+
+PASS All migrations apply to local PostgreSQL with all tables under RLS
+PASS Students cannot create events or grant themselves roles
+PASS Organiser creates a real draft and receives event-scoped access
+PASS Drafts and records are invisible across tenants
+PASS Direct status writes and cross-tenant RPC writes are rejected
+PASS Publishing before approval and self-approval are rejected
+PASS Faculty approval reserves venue and permits publish and open
+PASS Platform admin has tenant aggregates but no private student records
+PASS Required custom answers and external eligibility enforced server-side
+PASS Capacity confirms one participant and waitlists overflow in FIFO order
+PASS Duplicate registrations and cross-tenant registration blocked
+PASS Cancellation reserves the released seat for next queued student
+PASS Expired seat invitations are released and the next student is invited
+PASS Ticket tokens are hashed and only a participant can issue their own
+PASS Check-in requires an ongoing event and an assigned scanner role
+PASS QR check-in is idempotent and records scanner identity
+PASS Volunteer cannot manually check in or inspect another event
+PASS Check-in cannot use invalid tokens or cancelled registrations
+PASS Budget approval requires a separate reviewer; ledger is tenant-private
+PASS Certificates only issue to attended, completed events and verify publicly
+PASS Feedback requires actual attendance and completion
+PASS Overlapping venue bookings are rejected transactionally
+PASS Cross-tenant foreign keys reject venue and department references
+PASS Two-reviewer institutional policy rejects early publication
+PASS Invitation roles are validated by scope and cannot target another tenant
+PASS Unverified email cannot obtain institution membership
+PASS Direct inserts into attendance, roles and certificates are denied
+PASS Tenant suspension removes access even with an existing role assignment
+PASS Audit logs exist and browser callers cannot invoke scheduler jobs
+PASS External members cannot discover internal events or campus announcements
+PASS Active member options contain names but no private academic or contact fields
+PASS Scoped responsibility delegation cannot create an administrator
+PASS Directory CRUD is permission checked and tenant scoped
+PASS Resource allocations enforce inventory across overlapping events
+PASS Assigned volunteer can complete their own task, not another task
+PASS Rescheduling returns event to draft and invalidates its approval version
+PASS Live counts use full database totals and unrecognised timezones fail validation
+PASS Platform plan entitlements actually disable creation and registrations
+PASS Academic terms are tenant-scoped, validated and managed only by administrators
+
+39 passed, 0 failed. Local PostgreSQL WASM; Auth/Storage/Realtime infrastructure is stubbed, not hosted Supabase.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 build
+> tsc -b && vite build
+
+vite v7.3.8 building client environment for production...
+transforming...
+node_modules/zod/v4/core/util.js (400:0): A comment
+
+"// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+
+in "node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+node_modules/zod/v4/core/regexes.js (74:0): A comment
+
+"/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+ * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+ * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+
+in "node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+✓ 2821 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                            0.59 kB │ gzip:   0.39 kB
+dist/assets/index-OX3Sz8pC.css            41.90 kB │ gzip:  10.16 kB
+dist/assets/chevron-left-C7VeDQ3p.js       0.13 kB │ gzip:   0.14 kB
+dist/assets/cloud-upload-ZmTPvX08.js       0.25 kB │ gzip:   0.20 kB
+dist/assets/download-uN-_dMbl.js           0.26 kB │ gzip:   0.22 kB
+dist/assets/clock-BaDX4-J1.js              0.30 kB │ gzip:   0.20 kB
+dist/assets/TeamAccess-CIWL3MmE.js         1.61 kB │ gzip:   0.78 kB
+dist/assets/exportService-DfWGag96.js      3.83 kB │ gzip:   1.90 kB
+dist/assets/AcademicTerms-DDiLc7Bx.js      4.47 kB │ gzip:   1.91 kB
+dist/assets/EventWizard-DM8Kimzm.js       10.88 kB │ gzip:   3.91 kB
+dist/assets/Admin-BeIHTk2k.js             17.31 kB │ gzip:   5.82 kB
+dist/assets/format-BiVGQd1v.js            19.50 kB │ gzip:   5.61 kB
+dist/assets/Events-aDCemGPA.js            22.38 kB │ gzip:   7.00 kB
+dist/assets/purify.es-18JuyMri.js         30.12 kB │ gzip:  11.51 kB
+dist/assets/Student-BD77C4P-.js           34.37 kB │ gzip:  12.18 kB
+dist/assets/index.es-BeFt-yC_.js         158.97 kB │ gzip:  53.06 kB
+dist/assets/html2canvas.esm-DXEQVQnt.js  201.04 kB │ gzip:  47.43 kB
+dist/assets/esm-bhTeS6TV.js              375.14 kB │ gzip: 110.56 kB
+dist/assets/jspdf.es.min-CtwJnf5q.js     386.19 kB │ gzip: 126.39 kB
+dist/assets/Operations-DxT8vPwl.js       416.98 kB │ gzip: 120.85 kB
+dist/assets/index-Ag1DCBg5.js            792.14 kB │ gzip: 237.11 kB
+dist/assets/exceljs.min-Bz-TlPlC.js      936.98 kB │ gzip: 270.74 kB
+
+(!) Some chunks are larger than 750 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 16.66s
+
+EDGE FUNCTION TYPE CHECK
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 test:edge
+> deno check supabase/functions/invite-member/index.ts supabase/functions/deliver-notifications/index.ts supabase/functions/process-waitlists/index.ts
+
+Check supabase/functions/invite-member/index.ts
+Check supabase/functions/deliver-notifications/index.ts
+Check supabase/functions/process-waitlists/index.ts
+
+HOSTED CONNECTIVITY (BLOCKED)
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> planora@1.0.0 test:live
+> node scripts/verify-live.mjs
+
+BLOCKED: configure VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY. No hosted test was executed.

@@ -1,0 +1,63 @@
+{
+  "verified_at": "2026-11-15T04:02:20.176059+00:00",
+  "application": "PLANORA",
+  "hosted_supabase": false,
+  "checks": [
+    {
+      "command": "npm install",
+      "status": "passed",
+      "note": "Dependencies and package-lock generated during implementation."
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 0,
+      "status": "passed",
+      "includes": [
+        "TypeScript",
+        "ESLint",
+        "Vitest 49 passed",
+        "PostgreSQL database tests 39 passed",
+        "Vite production build"
+      ]
+    },
+    {
+      "command": "npm run test:edge",
+      "exit_code": 0,
+      "status": "passed",
+      "functions": 3
+    },
+    {
+      "command": "npm audit --omit=dev --json",
+      "exit_code": 0,
+      "status": "passed",
+      "production_vulnerabilities": 0
+    },
+    {
+      "command": "npm run test:live",
+      "exit_code": 2,
+      "status": "blocked",
+      "reason": "No project URL or publishable key; no hosted assertions executed."
+    }
+  ],
+  "schema": {
+    "migrations": 8,
+    "public_tables": 36,
+    "private_tables": 2,
+    "public_rpc_functions": 48
+  },
+  "visual_check": {
+    "status": "passed for inspected state",
+    "scope": "Unconfigured setup page, desktop and 390px iframe viewport"
+  },
+  "not_executed": [
+    "Hosted Auth/Storage/Realtime integration",
+    "Hosted migration deployment",
+    "Physical camera scan",
+    "Multi-connection concurrency/load",
+    "Vercel deployment"
+  ],
+  "warnings": [
+    "Main JS bundle ~792 kB and optional ExcelJS bundle ~937 kB minified. Both emit Vite size warnings.",
+    "The archive contains the complete implemented source; production rollout needs staging acceptance."
+  ]
+}
