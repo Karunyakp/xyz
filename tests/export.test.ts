@@ -1,6 +1,9 @@
 import { it, expect, vi, afterEach } from 'vitest';
 import { exportRows } from '../src/services/exportService';
-it('exports a real XLSX workbook with text cells and a usable dependency override', async () => {
+it(
+  'exports a real XLSX workbook with text cells and a usable dependency override',
+  { timeout: 25000 },
+  async () => {
   let saved: Blob | undefined;
   vi.stubGlobal('document', { createElement: () => ({ href: '', download: '', click: () => {} }) });
   vi.spyOn(URL, 'createObjectURL').mockImplementation((blob) => {

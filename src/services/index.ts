@@ -7,11 +7,14 @@ export const authService = {
     const { error } = await db().auth.signInWithPassword({ email, password });
     if (error) throw error;
   },
-  signup: async (email: string, password: string, full_name: string) => {
+  signup: async (email: string, password: string, full_name: string, requested_role = 'student') => {
     const { error } = await db().auth.signUp({
       email,
       password,
-      options: { data: { full_name }, emailRedirectTo: appUrl + '/auth/callback' },
+      options: {
+        data: { full_name, requested_role },
+        emailRedirectTo: appUrl + '/auth/callback',
+      },
     });
     if (error) throw error;
   },
