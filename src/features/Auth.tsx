@@ -31,7 +31,6 @@ export function AuthPage() {
   const reset = location.pathname === '/reset-password';
   const [mode, setMode] = useState<'login' | 'signup' | 'forgot'>('login');
   const [message, setMessage] = useState('');
-  const [emailInput, setEmailInput] = useState('');
   const [prefed, setPrefed] = useState<{ role: string; department?: string; name?: string } | null>(null);
   const [selectedRole, setSelectedRole] = useState<'student' | 'faculty' | 'organiser'>('student');
 
